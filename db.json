@@ -1,0 +1,15 @@
+{
+  "courses": [
+    { "id": "1", "name": "a title", "time": 100,"description": "f" },
+    { "id": "2", "name": "another title", "time": 200, "description":"f" }
+  ],
+  "signup": [
+    { "id": "1", "name": "admin", "password": "12345" },
+    { "id": "2", "name": "user", "password": "123" }
+  ],
+  "login": {
+    "name": "typicode"
+  }
+}
+
+

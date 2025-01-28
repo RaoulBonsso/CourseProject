@@ -1,1 +1,59 @@
-<p>courses works!</p>
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2 style="color: white;">Courses</h2>
+
+  <div class="d-flex">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" >Ajouter un Cours</button>
+    <button class="btn btn-danger mx-3" routerLink="/login">Deconnexion</button>
+  </div>
+</div>
+</nav>
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-3">
+    <h1 class="display-5 fw-bold">Les Courses sont vraiment important pour notre Jeunesse</h1>
+    <p class="col-mb-8 fs-4"> Vous pouvais consulter les details des cours ici</p>
+    <a class="btn btn-primary" target="_blank" type="button">Clique moi ✋</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body" >
+    <h5 class="card-title">Angular Avance</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">8 heures</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Modiifer</a>
+    <a href="#" class="btn btn-danger mx-3">Supprimer</a>
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un Cours</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Titre</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entre le nom du cours">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Description</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrez la description du cours">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Duree</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrez la duree du cours">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
