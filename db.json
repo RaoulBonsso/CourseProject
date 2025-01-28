@@ -1,15 +1,85 @@
 {
   "courses": [
-    { "id": "1", "name": "a title", "time": 100,"description": "f" },
-    { "id": "2", "name": "another title", "time": 200, "description":"f" }
+    {
+      "id": "1",
+      "title": "Introduction à la Programmation",
+      "time": 100,
+      "description": "Apprenez les bases de la programmation avec Python."
+    },
+    {
+      "id": "2",
+      "title": "Développement Web Frontend",
+      "time": 120,
+      "description": "Découvrez HTML, CSS et JavaScript pour créer des sites web modernes."
+    },
+    {
+      "id": "5",
+      "title": "Data Science avec Python",
+      "time": 180,
+      "description": "Explorez l'analyse de données et le machine learning avec Python."
+    },
+    {
+      "id": "6",
+      "title": "Introduction à l'Intelligence Artificielle",
+      "time": 200,
+      "description": "Découvrez les concepts fondamentaux de l'IA et du machine learning."
+    },
+    {
+      "id": "7",
+      "title": "Développement d'Applications Mobiles",
+      "time": 160,
+      "description": "Créez des applications mobiles avec Flutter et Dart."
+    },
+    {
+      "id": "8",
+      "title": "Sécurité Informatique",
+      "time": 140,
+      "description": "Apprenez les bases de la cybersécurité et les meilleures pratiques."
+    },
+    {
+      "id": "9",
+      "title": "Marketing Digital",
+      "time": 110,
+      "description": "Comprenez les stratégies de marketing en ligne pour votre entreprise."
+    },
+    {
+      "id": "10",
+      "title": "Bases de Données SQL",
+      "time": 130,
+      "description": "Apprenez à gérer et interroger des bases de données avec SQL."
+    },
+    {
+      "id": "11",
+      "title": "Photographie Numérique",
+      "time": 80,
+      "description": "Découvrez les techniques de photographie et d'édition d'images."
+    },
+    {
+      "id": "12",
+      "title": "Graphisme avec Adobe Illustrator",
+      "time": 150,
+      "description": "Maîtrisez les outils de conception graphique avec Illustrator."
+    },
+    {
+      "id": "13",
+      "title": "Musique et Production Audio",
+      "time": 170,
+      "description": "Apprenez à produire de la musique avec des logiciels professionnels."
+    }
   ],
   "signup": [
-    { "id": "1", "name": "admin", "password": "12345" },
-    { "id": "2", "name": "user", "password": "123" }
+    {
+      "id": "1",
+      "name": "admin",
+      "password": "12345"
+    },
+    {
+      "id": "2",
+      "name": "user",
+      "password": "123"
+    }
   ],
   "login": {
     "name": "typicode"
   }
 }
-
-

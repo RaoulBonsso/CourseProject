@@ -3,7 +3,7 @@
     <h2 style="color: white;">Courses</h2>
 
   <div class="d-flex">
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" >Ajouter un Cours</button>
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="clickAddCourse()" >Ajouter un Cours</button>
     <button class="btn btn-danger mx-3" routerLink="/login">Deconnexion</button>
   </div>
 </div>
@@ -16,17 +16,21 @@
   </div>
 </div>
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body" >
-    <h5 class="card-title">Angular Avance</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">8 heures</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Modiifer</a>
-    <a href="#" class="btn btn-danger mx-3">Supprimer</a>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let data of allCourses">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{data.title}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{data.time}} Heures</h6>
+          <p class="card-text">{{data.description}}</p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Modifier</a>
+          <a class="btn btn-danger mx-3" (click)="deleteCourse(data)">Supprimer</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -37,22 +41,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <form [formGroup]="formValue" >
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label">Titre</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entre le nom du cours">
+          <input formControlName="ptitle" type="text" class="form-control" id="formGroupExampleInput" placeholder="Entre le nom du cours">
         </div>
         <div class="mb-3">
           <label for="formGroupExampleInput2" class="form-label">Description</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrez la description du cours">
+          <input formControlName="pdescription" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrez la description du cours">
         </div>
         <div class="mb-3">
           <label for="formGroupExampleInput2" class="form-label">Duree</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrez la duree du cours">
+          <input formControlName="ptime" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrez la duree du cours">
         </div>
+      </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" *ngIf="showAdd" class="btn btn-primary" (click)="addCourse()">Add</button>
+        <button type="button"*ngIf="shoeEdit" class="btn btn-primary" >Update changes</button>
       </div>
     </div>
   </div>
