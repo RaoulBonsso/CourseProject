@@ -8,13 +8,19 @@ import { SignupComponent } from './signup/signup.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CourseCardComponent } from './course-card/course-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    CoursesComponent
+    CoursesComponent,
+    CourseCardComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
