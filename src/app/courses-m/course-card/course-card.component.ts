@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { CoursesService } from '../../shared/courses.service';
+import { CoursesService } from '../../shared/services/courses/courses.service';
 
 @Component({
   selector: 'app-course-card',

@@ -59,6 +59,12 @@
       "title": "Musique et Production Audio",
       "time": 170,
       "description": "Apprenez à produire de la musique avec des logiciels professionnels."
+    },
+    {
+      "id": "00a4",
+      "title": "data culture",
+      "description": "super cour sur la data et sa transformation",
+      "time": 230
     }
   ],
   "signup": [
@@ -85,9 +91,44 @@
       "id": "f8d1"
     },
     {
-      "username": "ivan",
-      "password": "123",
-      "id": "1037"
+      "id": "839f",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "0fdc",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "9ac5",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "ba66",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "8b4a",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "2df8",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "8021",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "9adf",
+      "username": "admin",
+      "password": "admin"
     }
   ]
 }
