@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
+import { Course } from '../../../courses-m/courses/course.model';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +22,8 @@ export class CoursesService {
     }));
   }
 
-  updateCourse(data:any, id:number){
-    return this.http.put(`http://localhost:3000/courses/${id}`,data).pipe(map((res:any)=>{
+  updateCourse(data:Course){
+    return this.http.put(`http://localhost:3000/courses/${data.id}`,data).pipe(map((res:any)=>{
       return res;
     }));
   }

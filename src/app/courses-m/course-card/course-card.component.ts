@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
-
 import { Router } from '@angular/router';
 import { CoursesService } from '../../shared/services/courses/courses.service';
-
+import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css'
 })
 export class CourseCardComponent {
+  @Output() courseToEdit = new EventEmitter<any>();
   allCourses:any
    constructor( private api:CoursesService, private router: Router){}
   ngOnInit():void {

@@ -65,6 +65,12 @@
       "title": "data culture",
       "description": "super cour sur la data et sa transformation",
       "time": 230
+    },
+    {
+      "id": "2",
+      "title": "ddd",
+      "description": "ddd",
+      "time": null
     }
   ],
   "signup": [

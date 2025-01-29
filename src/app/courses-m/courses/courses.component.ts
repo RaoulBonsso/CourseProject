@@ -16,6 +16,7 @@ export class CoursesComponent {
   courseModelObj: Course = new Course();
   showAdd!:boolean
   shoeEdit!:boolean
+  showModal: boolean = false;
   constructor(private fb:FormBuilder, private api:CoursesService, private router: Router){}
 
   ngOnInit():void {
@@ -39,21 +40,41 @@ export class CoursesComponent {
       console.warn(this.allCourses)
     });
   }
-  addCourse(){
+  addCourse() {
     this.courseModelObj.title = this.formValue.value.ptitle;
     this.courseModelObj.description = this.formValue.value.pdescription;
     this.courseModelObj.time = this.formValue.value.ptime;
-    this.api.addCourse(this.courseModelObj).subscribe((data:any)=>{
-      console.warn(data);
-      alert("Cour Ajouter avec Success")
-      let ref = document.getElementById('clear');
-      ref?.click();
-      this.formValue.reset();
-      this.getAllCourses();
-    }, err =>{
-      alert("Une erreur est survenu")
-    });
-  }
+
+    if (this.shoeEdit) {
+        this.api.updateCourse(this.courseModelObj).subscribe((data: any) => {
+            alert("Course mis à jour avec succès");
+            this.getAllCourses();
+            this.formValue.reset();
+            this.showModal = false; // Ferme la modale
+        }, err => {
+            alert("Une erreur est survenue lors de la mise à jour");
+        });
+    } else {
+        this.api.addCourse(this.courseModelObj).subscribe((data: any) => {
+            alert("Course ajouté avec succès");
+            this.getAllCourses();
+            this.formValue.reset();
+            this.showModal = false; // Ferme la modale
+        }, err => {
+            alert("Une erreur est survenue");
+        });
+    }
+}
+  // Ajoute cette méthode dans CoursesComponent
+updateCourse(data: any) {
+  this.courseModelObj.id = data.id; // Assure-toi que ton modèle a un champ ID
+  this.formValue.controls['ptitle'].setValue(data.title);
+  this.formValue.controls['pdescription'].setValue(data.description);
+  this.formValue.controls['ptime'].setValue(data.time);
+  this.showAdd = false; // Pour afficher le bouton Add ou Update
+  this.shoeEdit = true;
+}
+
   deleteCourse(data:any){
     this.api.deleteCourse(data.id).subscribe((res)=>{
       alert("Cour supprimer avec Success")

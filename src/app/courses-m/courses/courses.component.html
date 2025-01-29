@@ -17,7 +17,7 @@
 </div>
 
 <!-- les Cards des differents cours -->
-<app-course-card></app-course-card>
+<app-course-card (courseToEdit)="updateCourse($event)"></app-course-card>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
