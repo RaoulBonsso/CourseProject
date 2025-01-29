@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4" (click)="goToDetails()"  *ngFor="let data of allCourses">
+    <div class="col-md-4" *ngFor="let data of allCourses">
       <div class="card mb-4">
         <div class="card-body">
           <h5 class="card-title">{{data.title}}</h5>
@@ -8,6 +8,7 @@
           <p class="card-text">{{data.description}}</p>
           <a class="btn btn-primary" (click)="courseToEdit.emit(data)" data-bs-toggle="modal" data-bs-target="#exampleModal">Modifier</a>
           <a class="btn btn-danger mx-3" (click)="deleteCourse(data)">Supprimer</a>
+          <a class="btn btn-info" (click)="goToDetails(data.id)">Détails</a>
         </div>
       </div>
     </div>

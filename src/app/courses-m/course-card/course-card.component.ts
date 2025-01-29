@@ -20,8 +20,8 @@ export class CourseCardComponent {
   ngOnInit():void {
     this.getAllCourses();
   }
-  goToDetails() {
-    this.router.navigate(['/course-details', this.course.id]); // Navigue vers la page de détails
+  goToDetails(courseId: number) {
+    this.router.navigate(['/course-details', courseId]); // Redirige vers la page de détails
   }
   getAllCourses(){
     this.api.getCourses().subscribe((data:any)=>{
@@ -29,6 +29,7 @@ export class CourseCardComponent {
       console.warn(this.allCourses)
     });
   }
+
 
   deleteCourse(data:any){
     this.api.deleteCourse(data.id).subscribe((res)=>{

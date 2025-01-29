@@ -11,5 +11,6 @@ import { CoursDetailsComponent } from './cours-details/cours-details.component';
 @NgModule({
   declarations: [CoursesComponent,CourseCardComponent, CoursDetailsComponent],
   imports: [CommonModule, ReactiveFormsModule, BrowserModule, AppRoutingModule],
+  exports: [CoursesComponent, CourseCardComponent, CoursDetailsComponent]
 })
 export class CoursesMModule {}
