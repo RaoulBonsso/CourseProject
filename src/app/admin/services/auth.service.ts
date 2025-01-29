@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators'; // Assurez-vous d'importer le modèle User
-
+import { map, catchError } from 'rxjs/operators';
 import { User } from '../../interfaces/auth';
 
 @Injectable({
@@ -15,23 +14,31 @@ export class AuthService {
 
   validateUser(username: string, password: string): Observable<boolean> {
     return this.http.get<User[]>(`${this.baseUrl}/users?username=${username}&password=${password}`).pipe(
-      map(response => response.length > 0),
+      map(response => {
+        if (response.length > 0) {
+          sessionStorage.setItem('userPassword', password);
+          return true;
+        }
+        return false;
+      }),
       catchError(() => of(false))
     );
   }
+
   getTokenFromApi(username: string, password: string): Observable<{ token: string }> {
-    return this.http.post<{ token: string }>(`${this.baseUrl}/auth`, { username, password });
+    return this.http.post<{ token: string }>(`${this.baseUrl}/users`, { username, password });
   }
+
   isAuthenticated(): boolean {
     return !!this.getToken();
   }
 
   logout(): void {
     sessionStorage.removeItem('authToken');
+    sessionStorage.removeItem('userPassword'); 
   }
 
   getToken(): string | null {
     return sessionStorage.getItem('authToken');
   }
-
 }

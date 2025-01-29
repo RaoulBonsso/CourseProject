@@ -26,22 +26,20 @@ export class LoginComponent {
   loginUser() {
     const { username, password } = this.loginForm.value;
 
-
     if (!username || !password) {
       alert('Veuillez entrer un nom d\'utilisateur et un mot de passe.');
       return;
     }
 
     this.authService.validateUser(username, password).subscribe(
-      (isAuthenticated) => {
-        if (isAuthenticated) {
+      (isValid) => {
+        if (isValid) {
           this.authService.getTokenFromApi(username, password).subscribe(
             (tokenResponse) => {
               const token = tokenResponse.token;
               sessionStorage.setItem('authToken', token);
-              alert('Utilisateur authentifié');
+              alert('Utilisateur authentifié avec succès');
               this.router.navigate(['/courses']);
-              console.log('Utilisateur authentifié');
             },
             (error) => {
               console.error('Erreur lors de la récupération du token:', error);
@@ -49,7 +47,6 @@ export class LoginComponent {
             }
           );
         } else {
-          console.log('Identifiants invalides');
           alert('Identifiants invalides');
         }
       },
@@ -58,5 +55,4 @@ export class LoginComponent {
         alert('Une erreur est survenue. Veuillez réessayer.');
       }
     );
-  }
-}
+  }}
