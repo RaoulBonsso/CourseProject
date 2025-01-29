@@ -7,13 +7,13 @@
           <h5>Login To Manage Coirses</h5>
         </div>
         <hr>
-    <form action="">
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
       <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label"
           >Username</label
         >
         <input
-        formControlName="username"
+        formControlName="pusername"
           type="text"
           class="form-control"
           id="formGroupExampleInput"
@@ -25,14 +25,14 @@
           >Password</label
         >
         <input
-        formControlName="password"
+        formControlName="ppassword"
           type="password"
           class="form-control"
           id="formGroupExampleInput2"
           placeholder="Enter your password"
         />
       </div>
-      <button type="button" class="btn btn-primary text-center" routerLink="/courses">login</button>
+      <button type="submit" class="btn btn-primary text-center">login</button>
     </form>
     <a style="text-decoration: none; cursor: pointer; color: red; font-weight:bold;" routerLink="/signup"> New here ? Click to SignUp</a>
   </div>

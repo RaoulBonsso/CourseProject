@@ -5,26 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { CoursesComponent } from './courses/courses.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CourseCardComponent } from './course-card/course-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { CoursesMModule } from './courses-m/courses-m.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    CoursesComponent,
-    CourseCardComponent,
     NavbarComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoursesMModule,
     HttpClientModule,
     ReactiveFormsModule
   ],

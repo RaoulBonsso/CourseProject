@@ -31,12 +31,6 @@
       "description": "Créez des applications mobiles avec Flutter et Dart."
     },
     {
-      "id": "8",
-      "title": "Sécurité Informatique",
-      "time": 140,
-      "description": "Apprenez les bases de la cybersécurité et les meilleures pratiques."
-    },
-    {
       "id": "9",
       "title": "Marketing Digital",
       "time": 110,
@@ -65,6 +59,36 @@
       "title": "Musique et Production Audio",
       "time": 170,
       "description": "Apprenez à produire de la musique avec des logiciels professionnels."
+    },
+    {
+      "id": "fc07",
+      "title": "base de donnen Avance ",
+      "description": "Ce cours sera specialement oriente sur la conception et la mise en deploiment des base de donnees relationel e",
+      "time": 200
+    },
+    {
+      "id": "",
+      "title": "j",
+      "description": "l",
+      "time": 2
+    },
+    {
+      "id": "84c6",
+      "title": null,
+      "description": null,
+      "time": null
+    },
+    {
+      "id": "30ef",
+      "title": null,
+      "description": null,
+      "time": null
+    },
+    {
+      "id": "c437",
+      "title": null,
+      "description": null,
+      "time": null
     }
   ],
   "signup": [
@@ -79,7 +103,8 @@
       "password": "123"
     }
   ],
-  "login": {
-    "name": "typicode"
+  "users": {
+    "username": "admin",
+    "password": "admin"
   }
 }

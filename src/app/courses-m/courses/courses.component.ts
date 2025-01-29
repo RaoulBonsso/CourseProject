@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { CoursesService } from '../shared/courses.service';
+import { CoursesService } from '../../shared/courses.service';
 import { Course } from './course.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -14,7 +15,7 @@ export class CoursesComponent {
   courseModelObj: Course = new Course();
   showAdd!:boolean
   shoeEdit!:boolean
-  constructor(private fb:FormBuilder, private api:CoursesService){}
+  constructor(private fb:FormBuilder, private api:CoursesService, private router: Router){}
 
   ngOnInit():void {
     this.formValue = this.fb.group({
@@ -40,7 +41,7 @@ export class CoursesComponent {
   addCourse(){
     this.courseModelObj.title = this.formValue.value.ptitle;
     this.courseModelObj.description = this.formValue.value.pdescription;
-    this.courseModelObj.duree = this.formValue.value.ptime;
+    this.courseModelObj.time = this.formValue.value.ptime;
     this.api.addCourse(this.courseModelObj).subscribe((data:any)=>{
       console.warn(data);
       alert("Cour Ajouter avec Success")
@@ -60,5 +61,9 @@ export class CoursesComponent {
 
   }
 
+  logOut(){
+    sessionStorage.clear();
+    this.router.navigate(['/login']);
+  }
 
 }

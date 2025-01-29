@@ -4,6 +4,6 @@ Course
   id!: number;
   title: string="";
   description: string="";
-  duree: number = 0;
+  time: number = 0;
 
 }
