@@ -59,12 +59,6 @@
       "title": "Musique et Production Audio",
       "time": 170,
       "description": "Apprenez à produire de la musique avec des logiciels professionnels."
-    },
-    {
-      "id": "fc07",
-      "title": "base de donnen Avance ",
-      "description": "Ce cours sera specialement oriente sur la conception et la mise en deploiment des base de donnees relationel e",
-      "time": 200
     }
   ],
   "signup": [
@@ -79,8 +73,14 @@
       "password": "123"
     }
   ],
-  "users": {
+  "users": [{
     "username": "admin",
     "password": "admin"
-  }
+  },{
+    "username": "dani",
+    "password": "123"
+  },{
+    "username": "ivan",
+    "password": "123"
+  }]
 }

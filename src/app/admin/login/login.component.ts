@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   loginForm!: FormGroup;
@@ -20,26 +19,43 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      pusername: [''],
-      ppassword: [''],
+      username: [''],
+      password: [''],
     });
   }
   loginUser() {
     const { username, password } = this.loginForm.value;
-    this.authService.getUserByUsename(username).subscribe(
-      (response) => {
-        if (response.length > 0 && response[0].password === password) {
-          console.log('Invalid credentials');
-        } else {
-          sessionStorage.setItem('password', password);
-          alert('User authenticated');
 
-          this.router.navigate(['/courses']);
-          console.log('User authenticated');
+
+    if (!username || !password) {
+      alert('Veuillez entrer un nom d\'utilisateur et un mot de passe.');
+      return;
+    }
+
+    this.authService.validateUser(username, password).subscribe(
+      (isAuthenticated) => {
+        if (isAuthenticated) {
+          this.authService.getTokenFromApi(username, password).subscribe(
+            (tokenResponse) => {
+              const token = tokenResponse.token;
+              sessionStorage.setItem('authToken', token);
+              alert('Utilisateur authentifié');
+              this.router.navigate(['/courses']);
+              console.log('Utilisateur authentifié');
+            },
+            (error) => {
+              console.error('Erreur lors de la récupération du token:', error);
+              alert('Une erreur est survenue lors de la récupération du token.');
+            }
+          );
+        } else {
+          console.log('Identifiants invalides');
+          alert('Identifiants invalides');
         }
       },
       (error) => {
-        alert('Something went wrong');
+        console.error('Erreur d\'authentification:', error);
+        alert('Une erreur est survenue. Veuillez réessayer.');
       }
     );
   }

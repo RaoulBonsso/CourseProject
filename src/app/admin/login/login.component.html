@@ -4,7 +4,7 @@
       <div class="card">
         <div class="text-center" style="background-color: gray; color:white">
           <h1>Admin Area</h1>
-          <h5>Login To Manage Coirses</h5>
+          <h5>Login To Manage Courses</h5>
         </div>
         <hr>
     <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
@@ -13,7 +13,7 @@
           >Username</label
         >
         <input
-        formControlName="pusername"
+        formControlName="username"
           type="text"
           class="form-control"
           id="formGroupExampleInput"
@@ -25,7 +25,7 @@
           >Password</label
         >
         <input
-        formControlName="ppassword"
+        formControlName="password"
           type="password"
           class="form-control"
           id="formGroupExampleInput2"
