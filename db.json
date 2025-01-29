@@ -2,9 +2,9 @@
   "courses": [
     {
       "id": "1",
-      "title": "Introduction à la Programmation",
-      "time": 100,
-      "description": "Apprenez les bases de la programmation avec Python."
+      "title": "Introduction à la Programmations",
+      "description": "Apprenez les bases de la programmation avec Python.",
+      "time": 100
     },
     {
       "id": "2",
@@ -71,6 +71,18 @@
       "title": "ddd",
       "description": "ddd",
       "time": null
+    },
+    {
+      "id": "9db2",
+      "title": "ddd",
+      "description": "ddzzdz",
+      "time": 444
+    },
+    {
+      "id": "1543",
+      "title": "yyyy",
+      "description": "yyyyyyy",
+      "time": 44
     }
   ],
   "signup": [

@@ -48,34 +48,40 @@ export class CoursesComponent {
     if (this.shoeEdit) {
         this.api.updateCourse(this.courseModelObj).subscribe((data: any) => {
             alert("Course mis à jour avec succès");
+            let ref = document.getElementById('clear');
+            ref?.click();
+            this.formValue.reset();
             this.getAllCourses();
             this.formValue.reset();
-            this.showModal = false; // Ferme la modale
+            this.showModal = false;
         }, err => {
             alert("Une erreur est survenue lors de la mise à jour");
         });
     } else {
         this.api.addCourse(this.courseModelObj).subscribe((data: any) => {
             alert("Course ajouté avec succès");
+            let ref = document.getElementById('clear');
+            ref?.click();
+            this.formValue.reset();
             this.getAllCourses();
             this.formValue.reset();
-            this.showModal = false; // Ferme la modale
+            this.showModal = false;
         }, err => {
             alert("Une erreur est survenue");
         });
     }
 }
-  // Ajoute cette méthode dans CoursesComponent
-updateCourse(data: any) {
-  this.courseModelObj.id = data.id; // Assure-toi que ton modèle a un champ ID
+
+updateCourse(data: Course) {
+  this.courseModelObj.id = data.id;
   this.formValue.controls['ptitle'].setValue(data.title);
   this.formValue.controls['pdescription'].setValue(data.description);
   this.formValue.controls['ptime'].setValue(data.time);
-  this.showAdd = false; // Pour afficher le bouton Add ou Update
+  this.showAdd = false;
   this.shoeEdit = true;
 }
 
-  deleteCourse(data:any){
+  deleteCourse(data:Course){
     this.api.deleteCourse(data.id).subscribe((res)=>{
       alert("Cour supprimer avec Success")
       this.getAllCourses();

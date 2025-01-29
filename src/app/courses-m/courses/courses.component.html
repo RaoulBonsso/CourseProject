@@ -46,7 +46,7 @@
       <div class="modal-footer">
         <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" *ngIf="showAdd" class="btn btn-primary" (click)="addCourse()">Add</button>
-        <button type="button"*ngIf="shoeEdit" class="btn btn-primary" >Update changes</button>
+        <button type="button"*ngIf="shoeEdit" class="btn btn-primary" (click)="addCourse()">Update changes</button>
       </div>
     </div>
   </div>
