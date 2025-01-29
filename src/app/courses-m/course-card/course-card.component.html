@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4" *ngFor="let data of allCourses">
+    <div class="col-md-4" (click)="goToDetails()"  *ngFor="let data of allCourses">
       <div class="card mb-4">
         <div class="card-body">
           <h5 class="card-title">{{data.title}}</h5>

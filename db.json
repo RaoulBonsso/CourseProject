@@ -7,16 +7,10 @@
       "time": 100
     },
     {
-      "id": "2",
-      "title": "Développement Web Frontend",
-      "time": 120,
-      "description": "Découvrez HTML, CSS et JavaScript pour créer des sites web modernes."
-    },
-    {
       "id": "5",
       "title": "Data Science avec Python",
-      "time": 180,
-      "description": "Explorez l'analyse de données et le machine learning avec Python."
+      "description": "Explorez l'analyse de données et le machine learning avec Python.",
+      "time": 180
     },
     {
       "id": "6",
@@ -65,24 +59,6 @@
       "title": "data culture",
       "description": "super cour sur la data et sa transformation",
       "time": 230
-    },
-    {
-      "id": "2",
-      "title": "ddd",
-      "description": "ddd",
-      "time": null
-    },
-    {
-      "id": "9db2",
-      "title": "ddd",
-      "description": "ddzzdz",
-      "time": 444
-    },
-    {
-      "id": "1543",
-      "title": "yyyy",
-      "description": "yyyyyyy",
-      "time": 44
     }
   ],
   "signup": [

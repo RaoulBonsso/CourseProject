@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { CoursesService } from '../../shared/services/courses/courses.service';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Course } from '../courses/course.model';
 @Component({
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
@@ -8,10 +9,19 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class CourseCardComponent {
   @Output() courseToEdit = new EventEmitter<any>();
+  @Input() course!: Course; // Reçoit un cours en entrée
+  @Output() courseSelected = new EventEmitter<number>(); // Émet l'ID du cours
+
+  onSelect() {
+    this.courseSelected.emit(this.course.id); // Émet l'ID du cours sélectionné
+  }
   allCourses:any
    constructor( private api:CoursesService, private router: Router){}
   ngOnInit():void {
     this.getAllCourses();
+  }
+  goToDetails() {
+    this.router.navigate(['/course-details', this.course.id]); // Navigue vers la page de détails
   }
   getAllCourses(){
     this.api.getCourses().subscribe((data:any)=>{

@@ -4,11 +4,13 @@ import { LoginComponent } from './admin/login/login.component';
 import { SignupComponent } from './admin/signup/signup.component';
 import { CoursesComponent } from './courses-m/courses/courses.component';
 import { AuthGuard } from './admin/guards/auth.guard';
+import { CoursDetailsComponent } from './courses-m/cours-details/cours-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
+  { path: 'course-details/:id', component: CoursDetailsComponent },
   {path: 'courses', component:CoursesComponent,canActivate: [AuthGuard]}
 ];
 

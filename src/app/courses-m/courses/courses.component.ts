@@ -88,6 +88,9 @@ updateCourse(data: Course) {
     });
 
   }
+  goToDetails(courseId: number) {
+    this.router.navigate(['/course-details', courseId]);
+  }
 
   logOut(){
     sessionStorage.clear();

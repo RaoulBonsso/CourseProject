@@ -21,6 +21,11 @@ export class CoursesService {
       return res;
     }));
   }
+  getCourseById(data:number){
+    return this.http.get(`http://localhost:3000/courses/${data}`).pipe(map((res:any)=>{
+      return res;
+    }));
+  }
 
   updateCourse(data:Course){
     return this.http.put(`http://localhost:3000/courses/${data.id}`,data).pipe(map((res:any)=>{
