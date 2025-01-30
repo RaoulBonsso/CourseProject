@@ -1,52 +1,124 @@
 {
   "courses": [
     {
-      "id": "1",
-      "title": "Introduction à la Programmations",
-      "description": "Apprenez les bases de la programmation avec Python.",
-      "time": 100
+      "id": "2",
+      "title": "Développement Web Frontend",
+      "description": "Découvrez les technologies HTML, CSS et JavaScript.",
+      "time": 120
+    },
+    {
+      "id": "3",
+      "title": "Développement Web Backend",
+      "description": "Apprenez à construire des applications serveur avec Node.js.",
+      "time": 150
+    },
+    {
+      "id": "4",
+      "title": "Introduction à l'Intelligence Artificielle",
+      "description": "Explorez les concepts fondamentaux de l'IA et du machine learning.",
+      "time": 200
     },
     {
       "id": "5",
-      "title": "Data Science avec Python",
-      "description": "Explorez l'analyse de données et le machine learning avec Python.",
+      "title": "Analyse de Données avec Python",
+      "description": "Utilisez des bibliothèques Python pour analyser des données.",
       "time": 180
     },
     {
+      "id": "6",
+      "title": "Développement Mobile avec Flutter",
+      "description": "Créez des applications mobiles multiplateformes avec Flutter.",
+      "time": 160
+    },
+    {
       "id": "7",
-      "title": "Développement d'Applications Mobiles",
-      "time": 160,
-      "description": "Créez des applications mobiles avec Flutter et Dart."
+      "title": "Sécurité Informatique",
+      "description": "Comprenez les principes de base de la sécurité en informatique.",
+      "time": 140
+    },
+    {
+      "id": "8",
+      "title": "Bases de Données SQL",
+      "description": "Apprenez à interagir avec des bases de données relationnelles.",
+      "time": 130
     },
     {
       "id": "9",
-      "title": "Marketing Digital",
-      "time": 110,
-      "description": "Comprenez les stratégies de marketing en ligne pour votre entreprise."
+      "title": "Introduction à la Data Science",
+      "description": "Découvrez les étapes de la data science et des projets pratiques.",
+      "time": 220
     },
     {
       "id": "10",
-      "title": "Bases de Données SQL",
-      "time": 130,
-      "description": "Apprenez à gérer et interroger des bases de données avec SQL."
+      "title": "Création de Sites Web avec WordPress",
+      "description": "Apprenez à créer des sites web avec le CMS WordPress.",
+      "time": 110
     },
     {
       "id": "11",
-      "title": "Photographie Numérique",
-      "time": 80,
-      "description": "Découvrez les techniques de photographie et d'édition d'images."
+      "title": "Introduction à la Blockchain",
+      "description": "Comprenez les principes fondamentaux de la blockchain.",
+      "time": 170
     },
     {
       "id": "12",
-      "title": "Graphisme avec Adobe Illustrator",
-      "time": 150,
-      "description": "Maîtrisez les outils de conception graphique avec Illustrator."
+      "title": "Développement de jeux avec Unity",
+      "description": "Apprenez à créer des jeux vidéo avec Unity.",
+      "time": 230
     },
     {
       "id": "13",
-      "title": "Musique et Production Audio",
-      "time": 170,
-      "description": "Apprenez à produire de la musique avec des logiciels professionnels."
+      "title": "Programmation Orientée Objet",
+      "description": "Découvrez les concepts de la POO avec Java.",
+      "time": 140
+    },
+    {
+      "id": "14",
+      "title": "Développement d'API REST",
+      "description": "Apprenez à créer des API RESTful avec Express.js.",
+      "time": 150
+    },
+    {
+      "id": "15",
+      "title": "Introduction à la Robotique",
+      "description": "Explorez les bases de la robotique et de l'automatisation.",
+      "time": 190
+    },
+    {
+      "id": "16",
+      "title": "UX/UI Design",
+      "description": "Apprenez les principes du design d'expérience utilisateur.",
+      "time": 160
+    },
+    {
+      "id": "17",
+      "title": "Introduction à la Programmation Web",
+      "description": "Découvrez les bases de la programmation pour le web.",
+      "time": 120
+    },
+    {
+      "id": "18",
+      "title": "Introduction à l'IoT",
+      "description": "Comprenez les principes de l'Internet des Objets.",
+      "time": 180
+    },
+    {
+      "id": "19",
+      "title": "Introduction aux Systèmes d'Exploitation",
+      "description": "Explorez le fonctionnement des systèmes d'exploitation.",
+      "time": 150
+    },
+    {
+      "id": "20",
+      "title": "Introduction à la Gestion de Projet",
+      "description": "Apprenez les fondamentaux de la gestion de projet.",
+      "time": 140
+    },
+    {
+      "id": "21",
+      "title": "Introduction à la Réalité Virtuelle",
+      "description": "Découvrez les concepts de base de la réalité virtuelle.",
+      "time": 200
     }
   ],
   "signup": [
@@ -119,6 +191,31 @@
     },
     {
       "id": "57bb",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "445e",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "524e",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "4e85",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "a80e",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "a1e2",
       "username": "admin",
       "password": "admin"
     }
