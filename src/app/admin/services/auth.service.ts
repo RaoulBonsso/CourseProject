@@ -12,6 +12,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
+  // ici nous avons les methode pour pouvoire gere les action de connection recuperation de token deconnection et suppresion de token
   validateUser(username: string, password: string): Observable<boolean> {
     return this.http.get<User[]>(`${this.baseUrl}/users?username=${username}&password=${password}`).pipe(
       map(response => {
@@ -25,19 +26,22 @@ export class AuthService {
     );
   }
 
+  // cette methode nous permet de recuperer le token depuis le serveur
   getTokenFromApi(username: string, password: string): Observable<{ token: string }> {
     return this.http.post<{ token: string }>(`${this.baseUrl}/users`, { username, password });
   }
 
+  // cette methode nous permet de verifier si l'utilisateur est connecte
   isAuthenticated(): boolean {
     return !!this.getToken();
   }
-
+// cette methode nous permet de supprimer le token quand on ce deconnecte
   logout(): void {
     sessionStorage.removeItem('authToken');
-    sessionStorage.removeItem('userPassword'); 
+    sessionStorage.removeItem('userPassword');
   }
 
+  // cette methode nous permet de recuperer le token de l'utilisateur
   getToken(): string | null {
     return sessionStorage.getItem('authToken');
   }

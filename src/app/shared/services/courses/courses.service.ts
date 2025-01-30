@@ -10,6 +10,7 @@ export class CoursesService {
 
   constructor(private http:HttpClient) { }
 
+  // ici nous avons les different methode http qui vont nous permettre de pouvoire communique avec le serveur json 
   addCourse(data:any){
     return this.http.post("http://localhost:3000/courses",data).pipe(map((res:any)=>{
       return res;

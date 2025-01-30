@@ -1,0 +1,39 @@
+<div class="dashboard-container">
+  <h1>Dashboard des Cours de Programmation</h1>
+
+  <!-- Section de connexion -->
+  <section class="login-section">
+    <a routerLink="/login" class="login-button">Se connecter</a>
+  </section>
+
+  <!-- Section d'introduction -->
+  <section class="intro-section">
+    <h2>Bienvenue sur notre plateforme!</h2>
+    <p>Découvrez une variété de cours de programmation pour tous les niveaux.</p>
+  </section>
+
+  <!-- Section des cours -->
+  <section class="courses-section">
+    <h2>Nos Cours</h2>
+    <div class="courses">
+      <div class="course-card" *ngFor="let course of courses">
+        <img [src]="course.imageUrl" alt="{{ course.title }}" class="course-image" />
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.description }}</p>
+        <a routerLink="/login" class="learn-more">En savoir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section des témoignages -->
+  <section class="testimonials-section">
+    <h2>Témoignages</h2>
+    <p>"Cette plateforme a transformé ma façon d'apprendre!" - Étudiant satisfait</p>
+  </section>
+
+  <!-- Section de contact -->
+  <section class="contact-section">
+    <h2>Contactez-nous</h2>
+    <p>Pour toute question, veuillez nous contacter à Estiam.com</p>
+  </section>
+</div>

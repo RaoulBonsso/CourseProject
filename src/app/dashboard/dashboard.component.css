@@ -1,0 +1,124 @@
+.dashboard-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f4f8;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.login-section {
+  margin-bottom: 20px; /* Espace entre la section de connexion et le reste */
+}
+
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f39c12; /* Couleur orange vif */
+  color: white;
+  font-size: 1.2em; /* Taille de police augmentée */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button:hover {
+  background-color: #e67e22; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+.intro-section {
+  background-color: #e7f1ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.intro-section h2 {
+  color: #2980b9;
+}
+
+.courses-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.courses-section h2 {
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.course-image {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.course-image:hover {
+  transform: scale(1.05);
+}
+
+.learn-more {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #2980b9;
+}
+
+.testimonials-section {
+  background-color: #f9e79f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.testimonials-section h2 {
+  color: #8e44ad;
+}
+
+.contact-section {
+  background-color: #f5b7b1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-section h2 {
+  color: #c0392b;
+}

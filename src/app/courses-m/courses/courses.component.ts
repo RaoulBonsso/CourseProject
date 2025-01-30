@@ -11,6 +11,7 @@ import { CoursesService } from '../../shared/services/courses/courses.service';
   styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
+  // declaration des variables important pour stocke les donnes
   allCourses:any
   formValue! : FormGroup
   courseModelObj: Course = new Course();
@@ -28,18 +29,22 @@ export class CoursesComponent {
     this.getAllCourses();
   }
 
+    // fonction pour afficher le formulaire d'ajout de cours
   clickAddCourse(){
     this.formValue.reset();
     this.showAdd = true;
     this.shoeEdit = false;
   }
 
+    // fonction pour récupérer tous les cours via l'API
   getAllCourses(){
     this.api.getCourses().subscribe((data:any)=>{
       this.allCourses = data;
       console.warn(this.allCourses)
     });
   }
+
+   // fonction pour ajouter ou mettre à jour un cours
   addCourse() {
     this.courseModelObj.title = this.formValue.value.ptitle;
     this.courseModelObj.description = this.formValue.value.pdescription;
@@ -71,7 +76,8 @@ export class CoursesComponent {
         });
     }
 }
-
+// fonction pour remplir le formulaire d'édition avec les données du cours sélectionné
+// en gros ce que l'on fait ici c'est affecte les valeur recupere au champs de donnes pour pouvoir les editer plus facilement et les mettre a jour
 updateCourse(data: Course) {
   this.courseModelObj.id = data.id;
   this.formValue.controls['ptitle'].setValue(data.title);
@@ -80,7 +86,7 @@ updateCourse(data: Course) {
   this.showAdd = false;
   this.shoeEdit = true;
 }
-
+// fonction pour supprimer un cours
   deleteCourse(data:Course){
     this.api.deleteCourse(data.id).subscribe((res)=>{
       alert("Cour supprimer avec Success")
@@ -88,10 +94,12 @@ updateCourse(data: Course) {
     });
 
   }
+   // fonction pour naviguer vers les détails d'un cours spécifique
   goToDetails(courseId: number) {
     this.router.navigate(['/course-details', courseId]);
   }
 
+    // fonction pour déconnecter l'utilisateur
   logOut(){
     sessionStorage.clear();
     this.router.navigate(['/login']);

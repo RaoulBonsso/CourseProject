@@ -5,9 +5,11 @@ import { SignupComponent } from './admin/signup/signup.component';
 import { CoursesComponent } from './courses-m/courses/courses.component';
 import { AuthGuard } from './admin/guards/auth.guard';
 import { CoursDetailsComponent } from './courses-m/cours-details/cours-details.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component:DashboardComponent},
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
   { path: 'course-details/:id', component: CoursDetailsComponent },
