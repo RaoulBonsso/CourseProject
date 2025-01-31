@@ -36,9 +36,15 @@ export class AuthService {
     return !!this.getToken();
   }
 // cette methode nous permet de supprimer le token quand on ce deconnecte
-  logout(): void {
+// presentement le token est conserve sous
+// le nom de userPassword authToken est undefined mais
+//  je le laisse parce que je vais cree
+//  une petit api pour continue ce projet plutard et il sera plus
+// facile pour moi de reprendre la plus facilement
+  logOut(): void {
     sessionStorage.removeItem('authToken');
     sessionStorage.removeItem('userPassword');
+    console.log("11111")
   }
 
   // cette methode nous permet de recuperer le token de l'utilisateur

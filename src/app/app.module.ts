@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CoursesMModule } from './courses-m/courses-m.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminModule } from './admin/admin.module';
+import { AuthGuard } from './admin/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

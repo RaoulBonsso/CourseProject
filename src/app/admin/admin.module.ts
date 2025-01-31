@@ -31,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
+  exports: [LoginComponent, SignupComponent],
 })
 export class AdminModule {}
 RouterModule.forRoot([

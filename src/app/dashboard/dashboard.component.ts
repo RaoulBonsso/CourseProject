@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  // declaration dune simple liste statique des course pour mettre sur le dashboard en guuise de vitrine
+  // declaration dune simple liste statique des course
+  //  pour mettre sur le dashboard en guuise de vitrine
   courses = [
     {
       title: 'Cours de JavaScript',

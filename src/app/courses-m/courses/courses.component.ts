@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthService } from '../../admin/services/auth.service';
 
 import { Course } from './course.model';
 import { Router } from '@angular/router';
@@ -18,7 +19,7 @@ export class CoursesComponent {
   showAdd!:boolean
   shoeEdit!:boolean
   showModal: boolean = false;
-  constructor(private fb:FormBuilder, private api:CoursesService, private router: Router){}
+  constructor(private fb:FormBuilder, private api:CoursesService, private router: Router, private authService: AuthService){}
 
   ngOnInit():void {
     this.formValue = this.fb.group({
@@ -101,7 +102,14 @@ updateCourse(data: Course) {
 
     // fonction pour déconnecter l'utilisateur
   logOut(){
-    sessionStorage.clear();
+    /**
+     * Alors ici ce que nous fessont c'est appele la methode
+     * logOut qui est present dans le authService pour supprimer
+     *  le token qui avait ete stocke a la connection de l'utilisateur
+     * pour guarantire un securite minimal et apres lon redirige l'utilisateur
+     * sur la page de login
+     */
+    this.authService.logOut();
     this.router.navigate(['/login']);
   }
 
