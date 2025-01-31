@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './admin/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -24,7 +25,7 @@ const routes: Routes = [
 {
     path: 'courses',
     loadChildren: () =>
-      import('./courses-m/courses-m.module').then((m) => m.CoursesMModule),
+      import('./courses-m/courses-m.module').then((m) => m.CoursesMModule),canActivate:[AuthGuard]
   },
 ];
 

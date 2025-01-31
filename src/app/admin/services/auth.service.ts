@@ -49,6 +49,6 @@ export class AuthService {
 
   // cette methode nous permet de recuperer le token de l'utilisateur
   getToken(): string | null {
-    return sessionStorage.getItem('authToken');
+    return sessionStorage.getItem('userPassword');
   }
 }

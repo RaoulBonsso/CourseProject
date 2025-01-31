@@ -8,12 +8,13 @@ import { Course } from '../courses/course.model';
   styleUrl: './course-card.component.css'
 })
 export class CourseCardComponent {
+  // NOus alons emttre le cours sélectionné et les informations du cours à éditer
   @Output() courseToEdit = new EventEmitter<any>();
-  @Input() course!: Course; // Reçoit un cours en entrée
-  @Output() courseSelected = new EventEmitter<number>(); // Émet l'ID du cours
+  @Input() course!: Course; // La nous recevons un cours en entrée
+  @Output() courseSelected = new EventEmitter<number>(); // et cette ligne nous permet demmetre l'id du cours selectione
 
   onSelect() {
-    this.courseSelected.emit(this.course.id); // Émet l'ID du cours sélectionné
+    this.courseSelected.emit(this.course.id); // cette ligne nous permet simplement demttre l'id du cours selectione grace a la declaration de lemetteur que lon a definit en haut
   }
   allCourses:any
    constructor( private api:CoursesService, private router: Router){}
@@ -23,6 +24,9 @@ export class CourseCardComponent {
   goToDetails(courseId: number) {
     this.router.navigate(['/course-details', courseId]); // Redirige vers la page de détails
   }
+  /**
+   *la cette methode nous permet de recupere tout les courses disponible
+   */
   getAllCourses(){
     this.api.getCourses().subscribe((data:any)=>{
       this.allCourses = data;
@@ -30,7 +34,7 @@ export class CourseCardComponent {
     });
   }
 
-
+// cette methode nous permet de supprimer un course
   deleteCourse(data:any){
     this.api.deleteCourse(data.id).subscribe((res)=>{
       alert("Cour supprimer avec Success")

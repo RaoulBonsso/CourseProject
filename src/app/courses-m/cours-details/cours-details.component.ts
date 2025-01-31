@@ -12,7 +12,7 @@ export class CoursDetailsComponent {
   courseDetails: any;
 
   constructor(private route: ActivatedRoute, private api: CoursesService, private router: Router) {}
-
+// cette methode generalement est appel directement au lancement de la page et donc l'on recupere directementles donnes su cours que lon charge sur la page
   ngOnInit(): void {
     this.courseId = +this.route.snapshot.paramMap.get('id')!; // Récupérer l'ID du cours
     this.getCourseDetails();
