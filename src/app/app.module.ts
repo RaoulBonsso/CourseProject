@@ -16,8 +16,6 @@ import { AdminModule } from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignupComponent,
     NavbarComponent,
     FooterComponent,
     DashboardComponent
