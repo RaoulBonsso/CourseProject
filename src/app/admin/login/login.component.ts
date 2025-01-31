@@ -23,6 +23,11 @@ export class LoginComponent {
       password: [''],
     });
   }
+  /**
+   * cette methode nous permet d'authentifier un utilisateur
+   *  en effet on defragmente username et password avec
+   * les valeur entre pars lutilisateur qui sont present dans loginform
+   */
   loginUser() {
     const { username, password } = this.loginForm.value;
 

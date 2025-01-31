@@ -17,11 +17,17 @@ export class CoursesService {
     }));
   }
 
+  /**
+   * methode pour recupere les courses
+   */
   getCourses(){
     return this.http.get("http://localhost:3000/courses").pipe(map((res:any)=>{
       return res;
     }));
   }
+  /**
+   * methode pour recupere un cours a partie de sont id
+   */
   getCourseById(data:number){
     return this.http.get(`http://localhost:3000/courses/${data}`).pipe(map((res:any)=>{
       return res;
@@ -35,7 +41,9 @@ export class CoursesService {
       return res;
     }));
   }
-  deleteCourse(id:number){
+
+  /**
+   * metohode pour supprimer un cours */  deleteCourse(id:number){
     return this.http.delete(`http://localhost:3000/courses/${id}`).pipe(map((res:any)=>{
       return res;
     }));

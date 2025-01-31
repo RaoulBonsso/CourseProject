@@ -45,7 +45,7 @@ export class CoursesComponent {
     });
   }
 
-   // fonction pour ajouter ou mettre à jour un cours
+   // fonction pour ajouter ou mettre à jour un cour en fonction de la variable showEdit 
   addCourse() {
     this.courseModelObj.title = this.formValue.value.ptitle;
     this.courseModelObj.description = this.formValue.value.pdescription;
