@@ -4,7 +4,7 @@
       "id": "2",
       "title": "Développement Web Frontend",
       "description": "Découvrez les technologies HTML, CSS et JavaScript.",
-      "time": 120
+      "time": 1200
     },
     {
       "id": "3",
@@ -221,6 +221,41 @@
     },
     {
       "id": "3db0",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "2a2d",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "b9f0",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "6f14",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "89c1",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "3b36",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "7246",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "ff8b",
       "username": "admin",
       "password": "admin"
     }

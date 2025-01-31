@@ -10,7 +10,7 @@ export class CoursesService {
 
   constructor(private http:HttpClient) { }
 
-  // ici nous avons les different methode http qui vont nous permettre de pouvoire communique avec le serveur json 
+  // ici nous avons les different methode http qui vont nous permettre de pouvoire communique avec le serveur json
   addCourse(data:any){
     return this.http.post("http://localhost:3000/courses",data).pipe(map((res:any)=>{
       return res;
@@ -27,7 +27,9 @@ export class CoursesService {
       return res;
     }));
   }
-
+/** la nous avons la methode update qui prend en parametre un objet de type course et
+ non plus un any comme suggere et effectue
+*une modification en fonction de l'id du cour en question*/
   updateCourse(data:Course){
     return this.http.put(`http://localhost:3000/courses/${data.id}`,data).pipe(map((res:any)=>{
       return res;

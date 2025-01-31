@@ -5,19 +5,14 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { RouterModule } from '@angular/router';
 import { CoursesComponent } from '../courses-m/courses/courses.component';
 import { AuthGuard } from './guards/auth.guard';
-
-
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot([
-      { path: "courses", component:CoursesComponent, canActivate: [AuthGuard]},
-    ])
-  ],
+  imports: [CommonModule, BrowserModule, AppRoutingModule],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
-  ]
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
 })
-export class AdminModule { }
+export class AdminModule {}
